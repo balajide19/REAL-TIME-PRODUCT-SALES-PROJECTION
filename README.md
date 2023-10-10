@@ -30,7 +30,7 @@ below script generates random order data and inserts it into an AWS DynamoDB tab
 
 IMPORT STATEMENTS:
 
-<img width="700" height="300" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/873d5195-8fee-4f43-8456-ecd79b55c795">
+<img width="500" height="250" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/873d5195-8fee-4f43-8456-ecd79b55c795">
 
 
 
