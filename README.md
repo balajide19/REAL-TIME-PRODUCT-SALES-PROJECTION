@@ -39,7 +39,7 @@ below script generates random order data and inserts it into an AWS DynamoDB tab
 
 **AWS Session and DynamoDB Table Initialization:**
 
-<img width="499" height="250" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/120e15be-7c77-4e9a-8db8-00832105af8f">
+<img width="650" height="250" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/120e15be-7c77-4e9a-8db8-00832105af8f">
 
 1) Using boto3 we're creating a session with a specified AWS profile and region and a DynamoDB resource is initialized using the session.
 2) A specific DynamoDB table named 'OrderTable' is assigned to the table variable.
