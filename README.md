@@ -61,6 +61,46 @@ below script generates random order data and inserts it into an AWS DynamoDB tab
 3) This loop continues indefinitely until it's manually interrupted.
 4) If its manually interrupted, it will prints a message indicating that the script has been stopped.
 
+# DEPLOYMENT:
+
+Once mock_data is generated records will be inserted into dynamoDB and our dynamoDB stream is "Turned ON" for capturing CDC events.
+
+<img width="555" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/15c80ab2-d55c-43f1-90cd-56906a80c6b8">
+
+
+**INTEGRATION BETWEEN DYNAMODB AND KINESIS USING EVENTBRIDGE PIPE:**
+
+<img width="600" height="400" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/ce4e3a16-a42d-4ebd-9d83-3b029ba2b03e">
+
+1) Using Eventbridge Pipe we are integrating Dynamodb and Kinesis stream.
+2) Here the Source is "DynamoDb" , Target is "Kinesis", StartingPosition: "LATEST" as we will receive only the latest records and Batch size is "1"
+3) Here I didn't want any filter, enrichment so avoiding those steps in EB pipe.
+
+**BATCHING DATA USING FIREHOSE:**
+
+<img width="650" height="350" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/37a5a313-489d-4047-8c55-c2e55ae4f0c2">
+
+<img width="650" height="350" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/9ad6c687-0244-48f9-a326-6f23772ab985">
+
+
+1) Once the data is published in dynamoDB, it will be consumed by our exisiting "kinesis-orderstream" stream  using EB pipe.
+2) Since, its a stream data if we enter each records into "S3" more partition will be created resulting in more space usage.
+3) To avoid it, we will batch our data using "Kinesis Firehose".
+
+TRANSFORMATION OF DATA USING LAMBDA FUNCTION:
+
+Before loading the data from Firehose to S3 we are using "transformlambda" lambda function for decode the encoded data in the record and then transform it into JSON
+format.
+
+Below is the Lambda code:
+
+
+
+**CODE EXPLANATION:**
+
+
+   
+
 
 
 
