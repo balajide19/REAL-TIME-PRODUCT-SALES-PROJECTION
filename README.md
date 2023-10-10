@@ -26,7 +26,7 @@ below script generates random order data and inserts it into an AWS DynamoDB tab
 
 [mock_data_generator_for_dynamodb.py](https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/blob/9fecd2d6e1fe585c66b85fb13dd4dad7dae342c3/mock_data_generator_for_dynamodb.py)
 
-**Code explanation**:
+**CODE EXPLANATION**:
 
 **IMPORT STATEMENTS:**
 
