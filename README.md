@@ -16,20 +16,22 @@
 4) AWS S3 bucket
 5) Athena
 
-# BUILDIND DATA PIPELINE:
+# BUILDING DATA PIPELINE:
 
 DATASET:
 
-For achieving streamless data I generated mock data using python "random module".
+For achieving streamless data I generated mock data using python "random" module.
 
-Below code is used for generating mock data and then insert those random records in DynamoDB.
-
+below script generates random order data and inserts it into an AWS DynamoDB table using the boto3 library. The script runs indefinitely, inserting data every 3 seconds, until manually interrupted.
 
 [mock_data_generator_for_dynamodb.py](https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/blob/9fecd2d6e1fe585c66b85fb13dd4dad7dae342c3/mock_data_generator_for_dynamodb.py)
 
+**Code explanation**:
+
+<img width="600" height = "350" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/f4375d6a-1546-4b43-b7b5-dcb7b642d8ca">
 
 
 
-# BUILDING DATA PIPELINE:
+
 
 
