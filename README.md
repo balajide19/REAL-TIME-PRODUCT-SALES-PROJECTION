@@ -130,14 +130,11 @@ This function is the entry point for the AWS Lambda function. It takes two argum
 
 Finally, we will 'return' the list of transformed records and any records marked as 'ProcessingFailed' in the specified format.
 
+**FILE RECEIVED IN S3 BUCKET:**
 
+<img width="781" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/104ef213-996f-4dbf-a282-75af68500b1b">
 
-
-
-
-
-4) 
-
+As expected, file is received in 'ordersdatafromfirehose' bucket and partioned by orderid.
 
 
    
