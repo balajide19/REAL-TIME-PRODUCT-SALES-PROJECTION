@@ -78,10 +78,9 @@ Once mock_data is generated records will be inserted into dynamoDB and our dynam
 
 **BATCHING DATA USING FIREHOSE:**
 
-<img width="800" height="400" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/37a5a313-489d-4047-8c55-c2e55ae4f0c2"> <br>
+<img width="933" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/946a9481-2549-44a9-94b5-877a8728efd3">
 
-
-<img width="800" height="400" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/9ad6c687-0244-48f9-a326-6f23772ab985"> <br>
+<img width="936" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/55b09d9a-c281-40d7-8d88-83b558c10934">
 
 
 1) Once the data is published in dynamoDB, it will be consumed by our exisiting "kinesis-orderstream" stream  using EB pipe.
@@ -95,7 +94,7 @@ format.
 
 Below is the Lambda code:
 
-
+[]
 
 **CODE EXPLANATION:**
 
