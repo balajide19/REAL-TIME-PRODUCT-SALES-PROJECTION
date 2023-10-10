@@ -28,7 +28,7 @@ below script generates random order data and inserts it into an AWS DynamoDB tab
 
 **Code explanation**:
 
-<img width="800" height = "400" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/f4375d6a-1546-4b43-b7b5-dcb7b642d8ca">
+<img width="800" height = "350" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/f4375d6a-1546-4b43-b7b5-dcb7b642d8ca">
 
 
 
