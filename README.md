@@ -107,10 +107,36 @@ Below is the Lambda code:
 
 This function is the entry point for the AWS Lambda function. It takes two arguments: event and context.
 
-<img width="700" height="500" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/cc202332-d4f4-4b53-be28-16f514977e04">
+<img width="800" height="500" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/cc202332-d4f4-4b53-be28-16f514977e04">
+
+**PROCESSING EACH RECORD,DECODE AND TRANSFORMING:**
+
+1) Initializing an empty list "output_records" to store the transformed records.
+2) Then using 'for' we're looping through each record in the event received by the Lambda function.
+3) Starting a try-except block to handle exceptions that may occur during processing.
+4) Decoding the base64-encoded data in the record and then parse it as JSON and assigning variables 'payload' and payload_json' for it.
+
+**ACCESSING DYNAMODB AND EXTRACTING RECORDS:**
+
+1) Extracting data related to DynamoDB from the JSON payload and it assumes that the data contains a 'dynamodb' key with a 'NewImage' key inside it.
+2) Then we're extracting specific fields from the 'NewImage' and creating a new dictionary with the desired data type ('S' for string, 'N' for number).
+3) Converting the transformed data dictionary to a JSON string, add a newline character, and then encode it as base64.
+
+
+**APPENDING TRANSFORMED RECORD TO OUTPUT:**
+
+1) Appending the transformed record to the "output_records" list with the original record's 'recordId', a 'result' of 'Ok', and the encoded transformed data.
+2) If an exception occurs during record processing, we will mark the record as 'ProcessingFailed' but still return the original data using exception block.
+
+Finally, we will 'return' the list of transformed records and any records marked as 'ProcessingFailed' in the specified format.
 
 
 
+
+
+
+
+4) 
 
 
 
