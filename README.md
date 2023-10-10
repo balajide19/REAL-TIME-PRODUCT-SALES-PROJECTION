@@ -28,9 +28,40 @@ below script generates random order data and inserts it into an AWS DynamoDB tab
 
 **Code explanation**:
 
-IMPORT STATEMENTS:
+**IMPORT STATEMENTS:**
 
-<img width="500" height="250" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/873d5195-8fee-4f43-8456-ecd79b55c795">
+<img width="450" height="200" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/873d5195-8fee-4f43-8456-ecd79b55c795">
+
+'boto3' --> For interacting with AWS services using our Python scripts.
+'random' --> This python module helps us to generate random data.
+'time' --> To work with time-related operations in our Python programs as we need to use this for defining sleep time.
+'decimal' --> For handling decimal values with precision.
+
+**AWS Session and DynamoDB Table Initialization:**
+
+<img width="499" height="250" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/120e15be-7c77-4e9a-8db8-00832105af8f">
+
+1) Using boto3 we're creating a session with a specified AWS profile and region and a DynamoDB resource is initialized using the session.
+2) A specific DynamoDB table named 'OrderTable' is assigned to the table variable.
+
+**GENERATING RANDOM DATA AND INSERTING IT IN DYNAMODB:**
+
+<img width="648" height="300" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/4f5d002e-178d-460a-aa28-bac825d2a04d">
+
+1) Using generate_order_data function we will generate random order data, including an order ID, product name, quantity, and price and the data is returned as a dictionary.
+2) Once random data is generated we will use 'insert_into_dynamodb' function for inserting data into the DynamoDB table. It uses the put_item method to add the provided data to the table.
+3) If there's an error during insertion, it will be handled by our defined try exception block.
+
+**MAIN EXECUTION:**
+
+<img width="608" height="200" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/ac6222a6-aff8-4502-96ea-51c0af866837">
+
+1) The script enters the main execution block.
+2) Inside a while loop, it continuously generates random order data, inserts it into DynamoDB, and then sleeps for 3 seconds.
+3) This loop continues indefinitely until it's manually interrupted.
+4) If its manually interrupted, it will prints a message indicating that the script has been stopped.
+
+
 
 
 
