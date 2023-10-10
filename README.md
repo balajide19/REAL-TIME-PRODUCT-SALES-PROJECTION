@@ -65,12 +65,12 @@ below script generates random order data and inserts it into an AWS DynamoDB tab
 
 Once mock_data is generated records will be inserted into dynamoDB and our dynamoDB stream is "Turned ON" for capturing CDC events.
 
-<img width="555" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/15c80ab2-d55c-43f1-90cd-56906a80c6b8">
+<img width="700" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/15c80ab2-d55c-43f1-90cd-56906a80c6b8">
 
 
 **INTEGRATION BETWEEN DYNAMODB AND KINESIS USING EVENTBRIDGE PIPE:**
 
-<img width="600" height="400" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/ce4e3a16-a42d-4ebd-9d83-3b029ba2b03e">
+<img width="800" height="400" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/ce4e3a16-a42d-4ebd-9d83-3b029ba2b03e">
 
 1) Using Eventbridge Pipe we are integrating Dynamodb and Kinesis stream.
 2) Here the Source is "DynamoDb" , Target is "Kinesis", StartingPosition: "LATEST" as we will receive only the latest records and Batch size is "1"
@@ -78,9 +78,10 @@ Once mock_data is generated records will be inserted into dynamoDB and our dynam
 
 **BATCHING DATA USING FIREHOSE:**
 
-<img width="650" height="350" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/37a5a313-489d-4047-8c55-c2e55ae4f0c2">
+<img width="800" height="400" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/37a5a313-489d-4047-8c55-c2e55ae4f0c2"> <br>
 
-<img width="650" height="350" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/9ad6c687-0244-48f9-a326-6f23772ab985">
+
+<img width="800" height="400" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/9ad6c687-0244-48f9-a326-6f23772ab985"> <br>
 
 
 1) Once the data is published in dynamoDB, it will be consumed by our exisiting "kinesis-orderstream" stream  using EB pipe.
