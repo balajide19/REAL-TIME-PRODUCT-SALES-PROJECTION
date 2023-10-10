@@ -25,7 +25,7 @@ For achieving streamless data I generated mock data using python "random module"
 Below code is used for generating mock data and then insert those random records in DynamoDB.
 
 
-# mock_data_generator_for_dynamodb.py [a link] (https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/blob/9fecd2d6e1fe585c66b85fb13dd4dad7dae342c3/mock_data_generator_for_dynamodb.py
+# [mock_data_generator_for_dynamodb.py] (mock_data_generator_for_dynamodb.py) 
 
 
 
