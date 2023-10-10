@@ -94,9 +94,24 @@ format.
 
 Below is the Lambda code:
 
-[]
+[transformation_layer_with_lambda.py] (transformation_layer_with_lambda.py)
 
 **CODE EXPLANATION:**
+
+**Importing Libraries:**
+
+1) Using base64 module for encoding and decoding.
+2) Importing The json module is for working with JSON data.
+
+**LAMBDA HANDLER FUNCTION:**
+
+This function is the entry point for the AWS Lambda function. It takes two arguments: event and context.
+
+<img width="700" height="500" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/cc202332-d4f4-4b53-be28-16f514977e04">
+
+
+
+
 
 
    
