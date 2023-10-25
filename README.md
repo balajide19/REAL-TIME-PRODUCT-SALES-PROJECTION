@@ -144,6 +144,14 @@ The metadate of our file is collected using Crawler.
 
 SALES ANALYSIS:
 
+<img width="640" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/dee6b28f-0215-40ad-af41-db65cbb37953">
+
+Using Athena, I did some analysis on this data.
+
+
+
+****************************************************************************************************************************************************************************
+
 
 
    
