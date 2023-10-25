@@ -136,6 +136,15 @@ Finally, we will 'return' the list of transformed records and any records marked
 
 As expected, file is received in 'ordersdatafromfirehose' bucket and partioned by orderid.
 
+COLLECTING METADATA:
+
+<img width="816" alt="image" src="https://github.com/balajide19/REAL-TIME-PRODUCT-SALES-PROJECTION/assets/146630003/0fc99f09-1d31-4aee-8360-2e6488ddc83d">
+
+The metadate of our file is collected using Crawler.
+
+SALES ANALYSIS:
+
+
 
    
 
